@@ -1,0 +1,236 @@
+  body {
+    font-family: "Oxygen Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(bg.png), linear-gradient(179deg, #75208A 1%, #2F2082 56%, #372898 85%, #0B0340 100%);
+    background-repeat: repeat;
+    color: white;
+    background-size: cover;
+    min-height: 100vh; /* Set min-height instead of height */
+  }
+
+  html {
+    height: 100%;
+  }
+    main {
+      margin-top: 30px;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    hr {
+      max-width: 800px;
+      margin: 48px;
+      border: 1px solid #686d80;
+    }
+    
+    .search-form {
+      margin: 20px 25px;
+      padding: 5px 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 2px solid #332b1d;
+      font-size: 12px;
+    }
+    
+    button {
+      display: inline-block;
+      border: 2px solid #332b1d;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 12px;
+      background-color: #d0cd8f;
+    }
+    button:hover {
+      background-color: #b9b559;
+    }
+    
+    .measurements {
+      position: relative;
+      left: 25px;
+      top: -10px;
+    }
+    
+    .current-weather {
+      margin-top: 50px;
+    }
+    
+    .city-title {
+      max-width: 300px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    
+    .temp-title {
+      /* color: #37718e; */
+      font-size: 140px;
+      font-family: "Inter", sans-serif;
+      text-align: center;
+    }
+    
+    .todays-info {
+      margin: 15px 0;
+    }
+    
+    .side-info {
+      position: relative;
+      left: 72px;
+    }
+    
+    p,
+    ul {
+      font-family: "Oxygen Mono", monospace;
+      font-size: 15px;
+      margin: 0;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    .week-forecast {
+      text-align: center;
+      font-family: "Inter", sans-serif;
+    }
+    
+    .weather {
+      margin-top: 2px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    
+    h2 {
+      font-size: 48px;
+    }
+    
+    h3 {
+      font-size: 22px;
+    }
+    
+    span {
+      font-size: 20px;
+    }
+    
+    footer {
+      position: relative;
+      bottom: -100px;
+      text-align: center;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #0a95c9;
+    }
+    
+    a:hover {
+      color: #007bff;
+    }
+
+  #additional-info {
+      display: none;
+  }
+
+  .loading-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Set height to 100% to cover the entire section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
+    #app {
+        padding: 10px;
+    }
+
+    #city, #getInfo {
+        max-width: 100%;
+    }
+  }
+
+  #app {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #city {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+
+  #getInfo {
+    width: 100%;
+    max-width: 300px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  #placesList {
+    margin-top: 30px;
+    margin: 0;
+  }
+
+  #welcome-message {
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  #loading-spinner {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+  }
+
+  #category {
+    margin-top: 20px;
+  }
+
+  /* Responsive styles for mobile */
+  @media only screen and (max-width: 667px) {
+    body {
+      background-image: url(bg.png), linear-gradient(179deg, #75208A 1%, #2F2082 56%, #372898 85%, #0B0340 100%);
+      background-size: cover;
+      height: auto;
+      height: auto;
+      font-size: 10px;
+    }
+    html {
+      height: 100%;
+    }
+
+    span {
+      font-size: 10px;
+    }
+  }
+
+  /* Media query for Samsung Galaxy S8+ */
+  @media only screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+    body {
+        background-size: cover;
+        height: auto;
+    }
+  }
